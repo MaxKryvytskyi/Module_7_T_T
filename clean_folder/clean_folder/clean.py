@@ -29,7 +29,7 @@ folders_list = {
     "Other":[]
 }
 def main():
-    path = input("Введіть будь шлях для сортування--->>>")
+    path = input("Введіть, будь ласка, шлях для сортування --->>>")
     global folder_sort_path
     folder_sort_path = path
     start_main()
