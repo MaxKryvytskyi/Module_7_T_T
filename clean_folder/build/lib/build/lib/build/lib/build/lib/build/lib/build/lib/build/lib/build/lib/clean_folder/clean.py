@@ -28,7 +28,8 @@ folders_list = {
     "Html_css":['.html', '.css'],
     "Other":[]
 }
-def main(path):
+def main():
+    path = input("Введіть будь шлях для сортування--->>>")
     global folder_sort_path
     folder_sort_path = path
     start_main()
