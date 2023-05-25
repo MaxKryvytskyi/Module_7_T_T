@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: clean-folder
+Version: 0.0.1
+Summary: Sorting files be category
+Home-page: https://github.com/MaxKryvytskyi/clean_folder
+Author: Max Kryvytskyi
+Author-email: max.krivitskyh@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Ukrainian
+License-File: LICENSE
