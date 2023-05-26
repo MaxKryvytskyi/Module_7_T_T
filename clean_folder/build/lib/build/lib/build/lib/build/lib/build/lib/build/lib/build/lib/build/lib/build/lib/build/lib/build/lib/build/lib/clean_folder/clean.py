@@ -1,6 +1,7 @@
 import os  
 import shutil
 import re
+import sys
 
 folder_sort_path = None
 
@@ -29,9 +30,12 @@ folders_list = {
     "Other":[]
 }
 def main():
-    path = input("Введіть будь шлях для сортування--->>>")
     global folder_sort_path
-    folder_sort_path = path
+    try:
+        path = sys.argv[1]
+        folder_sort_path = path
+    except:
+        main()
     start_main()
 
 # Якщо користувач ввів неправильний шлях
@@ -68,12 +72,14 @@ def fiks():
             if not filename[0] == new_name:
                 try:
                     if os.path.isdir(filename):
-                        os.rename(os.path.join(folder_sort_path, filename[0], folder_sort_path, new_name))
+                        os.replace(os.path.join(folder_sort_path, filename[0], folder_sort_path, new_name))
                     else:
-                        os.rename(os.path.join(folder_sort_path, filename), os.path.join(folder_sort_path, (new_name + form)))
+                        os.replace(os.path.join(folder_sort_path, filename), os.path.join(folder_sort_path, (new_name + form)))
                 except FileExistsError:
                     pass
                 except FileNotFoundError:
+                    pass
+                except TypeError:
                     pass
 
 # Створює папки в які будуть сортуватися файли 
